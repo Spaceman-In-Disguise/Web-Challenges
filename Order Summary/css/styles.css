@@ -1,0 +1,173 @@
+:root {
+    --pale-blue: #e0e8ff;
+    --ligh-blue: #f8f9fd;
+    --bright-blue: hsl(245, 75%, 52%);
+    --brighter-blue: hsl(245, 83%, 68%);
+    --white: #ffffff;
+    --black: #000000;
+    --font-main: 'Red Hat Display', sans-serif;
+    --summary-car-width: 40.5rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--pale-blue);
+    background-image: url(/img/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -44rem;
+    background-size: cover;
+
+    
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+p, a {
+    font-size: 1.6rem;
+    margin: 0.3rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+
+.border {
+    border-radius: 20px;
+}
+.border-ligh {
+    border-radius: 10px;
+}
+.ligh-blue {
+    background-color: var(--ligh-blue);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.off {
+    font-size: 1.63rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--pale-blue);
+}
+
+.off:hover {
+    color: var(--black);
+    cursor: pointer;
+}
+.text-center {
+    text-align: center;
+}
+
+.padding-ligh {
+    padding: 0 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-card {
+    max-width: var(--summary-car-width);
+    height: 63rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+    background-color: var(--white);
+    
+}
+
+.content {
+    height: 66%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image-hero {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+    margin: 2rem;
+}
+
+.button {
+    height: 5rem;
+    background-color: var(--bright-blue);
+    font-size: 1.63rem;
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    box-shadow: -6px 19px 29px 3px #c2b9ff;
+}
+
+.button:hover {
+    background-color: var(--brighter-blue);
+    cursor: pointer;
+}
+
+@media (max-width: 460px){
+      body {
+        background-image: url(/img/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 0 -44rem;
+        background-size: cover;;
+      }
+
+      .content {
+          justify-content: space-between;
+      }
+
+      .summary-card{
+          width: 28rem;
+          height: 50rem;
+      }
+
+      .card-plan, .card-plan > * > * > *, .card-plan > *{
+        font-size: 1.3rem;
+        padding: 0.2rem;
+    }
+
+    .icon {
+        margin:0.6rem;
+    }
+}
+
